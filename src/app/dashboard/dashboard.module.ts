@@ -6,10 +6,11 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from '../material/material.module';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { HomeComponent } from './pages/home/home.component';
 registerLocaleData(LocaleEs, 'es-MX');
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, HomeComponent],
   imports: [CommonModule, DashboardRoutingModule, MaterialModule],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
