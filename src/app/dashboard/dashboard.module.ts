@@ -6,11 +6,20 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from '../material/material.module';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { HomeComponent } from './pages/home/home.component';
+import { HeroPageComponent } from './pages/hero-page/hero-page.component';
+import { HeroesListPageComponent } from './pages/heroes-list-page/heroes-list-page.component';
+import { HeroAddPageComponent } from './pages/hero-add-page/hero-add-page.component';
+import { HeroSearchPageComponent } from './pages/hero-search-page/hero-search-page.component';
 registerLocaleData(LocaleEs, 'es-MX');
 
 @NgModule({
-  declarations: [DashboardComponent, HomeComponent],
+  declarations: [
+    DashboardComponent,
+    HeroPageComponent,
+    HeroesListPageComponent,
+    HeroAddPageComponent,
+    HeroSearchPageComponent,
+  ],
   imports: [CommonModule, DashboardRoutingModule, MaterialModule],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },

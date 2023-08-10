@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { SharedModule } from './shared/shared.module';
 registerLocaleData(LocaleEs, 'es-MX');
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ registerLocaleData(LocaleEs, 'es-MX');
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    SharedModule,
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
