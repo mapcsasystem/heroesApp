@@ -1,1 +1,49 @@
-<p>login-page works!</p>
+<div class="flex flex-row justify-content-center">
+
+    <mat-card class="w-3.5 mt-2 flex flex-col">
+        <mat-card-header class="flex flex-row justify-content-center">
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <form [formGroup]="form" (ngSubmit)="summit()" autocomplete="off" class="w-full">
+            <mat-card-content class="w-full">
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Correo eléctronico</mat-label>
+                        <input type="text" matInput placeholder="Correo eléctronico" formControlName="email">
+                        <mat-icon matSuffix>mail</mat-icon>
+                        <mat-error
+                            *ngIf="getField('email')?.invalid && (getField('email')?.dirty || getField('email')?.touched)">
+                            <span *ngIf="getField('email')?.hasError('required')">
+                                Campo requerido.
+                            </span>
+                            <span *ngIf="getField('email')?.hasError('pattern')">
+                                Correo no valido.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Contraseña</mat-label>
+                        <input [type]="eye?'text':'password'" matInput placeholder="Contraseña"
+                            formControlName="password">
+                        <mat-icon matSuffix class="cursor-pointer" (click)="eye=!eye">{{
+                            eye?'visibility':'visibility_off' }}</mat-icon>
+                        <mat-error *ngIf="true">
+                            <span>
+                                error
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <button type="submit" class="w-full" mat-raised-button color="primary">Aceptar</button>
+                </p>
+                <p>
+                    <button type="button" class="w-full" mat-button>¿Registrarse?</button>
+                </p>
+            </mat-card-content>
+        </form>
+
+    </mat-card>
+</div>

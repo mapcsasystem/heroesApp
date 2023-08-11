@@ -1,6 +1,7 @@
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import LocaleEs from '@angular/common/locales/es-MX';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 registerLocaleData(LocaleEs, 'es-MX');
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +18,8 @@ registerLocaleData(LocaleEs, 'es-MX');
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MaterialModule,
     SharedModule,
   ],

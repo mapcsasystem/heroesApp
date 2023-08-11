@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundPageComponent } from './shared/pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
   // {
@@ -16,9 +17,17 @@ const routes: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
-    path: '**',
-    redirectTo: 'dashboard',
+    path: '404',
+    component: NotFoundPageComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'auth',
     pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: '404',
   },
 ];
 

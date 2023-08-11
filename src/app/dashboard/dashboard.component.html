@@ -5,11 +5,13 @@
     <mat-nav-list>
       <div *ngIf="(isHandset$ | async);else desktop">
         <a mat-list-item routerLink="dashboard/home" routerLinkActive="active" (click)="drawer.toggle()">
-          Link 1
+          Listado de héroes
         </a>
       </div>
       <ng-template #desktop>
-        <a mat-list-item routerLink="dashboard/home" routerLinkActive="active">Link 1</a>
+        <a mat-list-item routerLink="dashboard/home" routerLinkActive="active">
+          Listado de heroés
+        </a>
       </ng-template>
     </mat-nav-list>
   </mat-sidenav>
