@@ -6,7 +6,6 @@ import { ValidatorsService } from 'src/app/shared/services/validators.service';
 @Component({
   selector: 'auth-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
   private readonly _fb = inject(FormBuilder);
@@ -22,12 +21,11 @@ export class LoginPageComponent {
 
   eye: boolean = false;
 
-  // constructor(
-  //   private readonly _fb: FormBuilder,
-  //   private readonly _router: Router
-  // ) {}
-
   summit(): void {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
     console.log(this.form.value);
   }
 

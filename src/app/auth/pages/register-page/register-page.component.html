@@ -1,14 +1,78 @@
-<div class="flex flex-row">
-    <mat-card class="w-4">
-        <mat-card-header>
+<div class="flex flex-row justify-content-center">
+
+    <mat-card class="w-3.5 mt-2 flex flex-col">
+        <mat-card-header class="flex flex-row justify-content-center">
             <mat-card-title>Login</mat-card-title>
         </mat-card-header>
-        <mat-card-content>
-            sdfsdf
-        </mat-card-content>
-        <mat-card-actions>
+        <form [formGroup]="form" (ngSubmit)="summit()" autocomplete="off" class="w-full">
+            <mat-card-content class="w-full">
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Nombre completo</mat-label>
+                        <input type="text" matInput placeholder="Nombre completo" formControlName="fullName">
+                        <mat-icon matSuffix>person</mat-icon>
+                        <mat-error
+                            *ngIf="getField('fullName')?.invalid && (getField('fullName')?.dirty || getField('fullName')?.touched)">
+                            <span *ngIf="getField('fullName')?.hasError('required')">
+                                Campo requerido.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Correo eléctronico</mat-label>
+                        <input type="text" matInput placeholder="Correo eléctronico" formControlName="email">
+                        <mat-icon matSuffix>mail</mat-icon>
+                        <mat-error
+                            *ngIf="getField('email')?.invalid && (getField('email')?.dirty || getField('email')?.touched)">
+                            <span *ngIf="getField('email')?.hasError('required')">
+                                Campo requerido.
+                            </span>
+                            <span *ngIf="getField('email')?.hasError('pattern')">
+                                Correo no valido.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Contraseña</mat-label>
+                        <input [type]="eye1?'text':'password'" matInput placeholder="Contraseña"
+                            formControlName="password">
+                        <mat-icon matSuffix class="cursor-pointer" (click)="eye1=!eye1">{{
+                            eye1?'visibility':'visibility_off' }}</mat-icon>
+                        <mat-error
+                            *ngIf="getField('password')?.invalid && (getField('password')?.dirty || getField('password')?.touched)">
+                            <span *ngIf="getField('password')?.hasError('required')">
+                                Campo requerido.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Validar contraseña</mat-label>
+                        <input [type]="eye2?'text':'password'" matInput placeholder="Validar contraseña"
+                            formControlName="password1">
+                        <mat-icon matSuffix class="cursor-pointer" (click)="eye2=!eye2">{{
+                            eye2?'visibility':'visibility_off' }}</mat-icon>
+                        <mat-error
+                            *ngIf="getField('password1')?.invalid && (getField('password1')?.dirty || getField('password1')?.touched)">
+                            <span *ngIf="getField('password1')?.hasError('required')">
+                                Campo requerido.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <button type="submit" class="w-full" mat-raised-button color="primary">Aceptar</button>
+                </p>
+                <p>
+                    <button type="button" class="w-full" mat-button (click)="goTo()">¿Ir al login?</button>
+                </p>
+            </mat-card-content>
+        </form>
 
-
-        </mat-card-actions>
     </mat-card>
 </div>

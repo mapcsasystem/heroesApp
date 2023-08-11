@@ -1,10 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
+  selector: 'auth-root',
+  template: ` <mat-toolbar color="primary"> Heroes App </mat-toolbar>
+    <router-outlet></router-outlet>`,
 })
 export class AuthComponent {}
