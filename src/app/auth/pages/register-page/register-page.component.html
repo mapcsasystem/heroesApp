@@ -2,7 +2,7 @@
 
     <mat-card class="w-3.5 mt-2 flex flex-col">
         <mat-card-header class="flex flex-row justify-content-center">
-            <mat-card-title>Login</mat-card-title>
+            <mat-card-title>Registrarse</mat-card-title>
         </mat-card-header>
         <form [formGroup]="form" (ngSubmit)="summit()" autocomplete="off" class="w-full">
             <mat-card-content class="w-full">
@@ -66,10 +66,10 @@
                     </mat-form-field>
                 </p>
                 <p>
-                    <button type="submit" class="w-full" mat-raised-button color="primary">Aceptar</button>
+                    <button type="submit" class="w-full" mat-flat-button color="primary">Aceptar</button>
                 </p>
                 <p>
-                    <button type="button" class="w-full" mat-button (click)="goTo()">¿Ir al login?</button>
+                    <button type="button" class="w-full" mat-flat-button (click)="goTo()">¿Ir al login?</button>
                 </p>
             </mat-card-content>
         </form>

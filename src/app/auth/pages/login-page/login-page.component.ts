@@ -22,6 +22,7 @@ export class LoginPageComponent {
   eye: boolean = false;
 
   summit(): void {
+    this._router.navigateByUrl('dashboard/heroes-list', { replaceUrl: true });
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;

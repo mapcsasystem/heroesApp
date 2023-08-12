@@ -29,18 +29,19 @@
                             formControlName="password">
                         <mat-icon matSuffix class="cursor-pointer" (click)="eye=!eye">{{
                             eye?'visibility':'visibility_off' }}</mat-icon>
-                        <mat-error *ngIf="true">
-                            <span>
-                                error
+                        <mat-error
+                            *ngIf="getField('password')?.invalid && (getField('password')?.dirty || getField('password')?.touched)">
+                            <span *ngIf="getField('password')?.hasError('required')">
+                                Campo requerido.
                             </span>
                         </mat-error>
                     </mat-form-field>
                 </p>
                 <p>
-                    <button type="submit" class="w-full" mat-raised-button color="primary">Aceptar</button>
+                    <button type="submit" class="w-full" mat-flat-button color="primary">Aceptar</button>
                 </p>
                 <p>
-                    <button type="button" class="w-full" mat-button (click)="goTo()">¿Registrarse?</button>
+                    <button type="button" class="w-full" mat-flat-button (click)="goTo()">¿Registrarse?</button>
                 </p>
             </mat-card-content>
         </form>
