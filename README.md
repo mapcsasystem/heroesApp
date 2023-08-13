@@ -49,7 +49,7 @@ npm install
 npm start
 ```
 
-### Comandos a utilizar en otra terminal terminal
+### Comandos a utilizar en otra terminal en la misma raíz del proyecto
 
 ```
 npm run backend
