@@ -37,6 +37,11 @@ const routes: Routes = [
         component: NotFoundPageComponent,
       },
       {
+        path: '',
+        redirectTo: 'heroes-list',
+        pathMatch: 'full',
+      },
+      {
         path: '**',
         redirectTo: '404',
       },
