@@ -12,6 +12,7 @@ import { MaterialModule } from '../material/material.module';
 import LocaleEs from '@angular/common/locales/es-MX';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 registerLocaleData(LocaleEs, 'es-MX');
 
@@ -30,6 +31,7 @@ registerLocaleData(LocaleEs, 'es-MX');
     DashboardRoutingModule,
     HttpClientModule,
     MaterialModule,
+    SharedModule,
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
