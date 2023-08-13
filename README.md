@@ -51,7 +51,9 @@ npm start
 
 ### Comandos a utilizar en otra terminal terminal
 
-```npm run backend``````
+```
+npm run backend
+```
 
 #### Pagina web de la app [Web Countries App](https://mapcsasystem.github.io/heroesApp/)
 
