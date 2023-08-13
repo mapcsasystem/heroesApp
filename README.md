@@ -55,6 +55,6 @@ npm start
 npm run backend
 ```
 
-#### Pagina web de la app [Web Countries App](https://mapcsasystem.github.io/heroesApp/)
+#### Pagina web de la app [Web Heroes App](https://mapcsasystem.github.io/heroesApp/)
 
 El diseño web repositive
