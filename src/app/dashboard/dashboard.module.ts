@@ -10,6 +10,7 @@ import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 import { HeroesListPageComponent } from './pages/heroes-list-page/heroes-list-page.component';
 import { HeroAddPageComponent } from './pages/hero-add-page/hero-add-page.component';
 import { HeroSearchPageComponent } from './pages/hero-search-page/hero-search-page.component';
+import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(LocaleEs, 'es-MX');
 
 @NgModule({
@@ -20,7 +21,12 @@ registerLocaleData(LocaleEs, 'es-MX');
     HeroAddPageComponent,
     HeroSearchPageComponent,
   ],
-  imports: [CommonModule, DashboardRoutingModule, MaterialModule],
+  imports: [
+    CommonModule,
+    DashboardRoutingModule,
+    HttpClientModule,
+    MaterialModule,
+  ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
     { provide: LOCALE_ID, useValue: 'es-MX' },
