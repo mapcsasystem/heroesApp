@@ -4,7 +4,7 @@
 
 ### Descripción:
 
-El Buscador de Paises en Angular es una página web interactiva que utiliza el popular framework Angular para permitir a los usuarios buscar y descubrir países de manera rápida y sencilla. La aplicación utiliza la API de un servicio de terceros [Rest Countries](https://restcountries.com/#endpoints-code) para obtener una amplia selección de Paises actualizados.
+App para mostrar Héroes y haciendo un CRUD sobre los mismos.
 
 ### Tecnologías utilizadas
 
