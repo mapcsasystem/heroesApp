@@ -11,7 +11,7 @@
     "build:href": "ng build -c production --base-href ./",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "delete:docs": "del docs",
-    "copy:dist": "copyfiles dist/country-app/* ./docs -f && copyfiles dist/country-app/assets/* ./docs/assets -f"
+    "copy:dist": "copyfiles dist/heroes-app/* ./docs -f && copyfiles dist/heroes-app/assets/* ./docs/assets -f && copyfiles dist/heroes-app/assets/heroes/* ./docs/assets/heroes -f"
   },
   "private": true,
   "dependencies": {
