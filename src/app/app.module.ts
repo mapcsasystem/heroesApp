@@ -31,7 +31,7 @@ registerLocaleData(LocaleEs, 'es-MX');
     SharedModule,
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    // { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
     { provide: LOCALE_ID, useValue: 'es-MX' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'MXN' },

@@ -1,4 +1,9 @@
-import { CommonModule, registerLocaleData } from '@angular/common';
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+  registerLocaleData,
+} from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
@@ -34,6 +39,8 @@ registerLocaleData(LocaleEs, 'es-MX');
     SharedModule,
   ],
   providers: [
+    // { provide: LocationStrategy, useClass: HashLocationStrategy },
+
     { provide: MAT_DATE_LOCALE, useValue: 'es-MX' },
     { provide: LOCALE_ID, useValue: 'es-MX' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'MXN' },
