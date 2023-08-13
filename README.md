@@ -8,9 +8,9 @@ El Buscador de Paises en Angular es una página web interactiva que utiliza el p
 
 ### Tecnologías utilizadas
 
-#### Angular [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
+#### Angular [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-#### Angular Material [Angular Material ](https://material.angular.io/) version 16.1.7.
+#### Angular Material [Angular Material ](https://material.angular.io/) version 16.2.0.
 
 #### Prime Flex [Prime Flex](https://www.primefaces.org/primeflex/)
 
@@ -44,7 +44,7 @@ sudo npm i -g @angular/cli
 
 ```
 git clone https://github.com/mapcsasystem/heroesApp.git
-cd countryApp
+cd heroesApp
 npm install
 npm start
 ```
