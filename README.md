@@ -12,6 +12,8 @@ App para mostrar Héroes y haciendo un CRUD sobre los mismos.
 
 #### Angular Material [Angular Material ](https://material.angular.io/) version 16.2.0.
 
+#### Animate.css [Animate.css](https://animate.style/#usage) version 4.1.
+
 #### Prime Flex [Prime Flex](https://www.primefaces.org/primeflex/)
 
 #### NodeJS [Node](https://nodejs.org/dist/v18.16.0/) version 18.16.0.
