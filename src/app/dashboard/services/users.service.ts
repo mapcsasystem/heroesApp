@@ -7,5 +7,5 @@ import { environment } from 'src/environments/environment';
 })
 export class UsersService {
   private readonly _http = inject(HttpClient);
-  private readonly baseApiUrl = environment.baseApiUrl;
+  private readonly apiUrl = environment.apiUrl;
 }

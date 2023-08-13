@@ -20,7 +20,7 @@ const routes: Routes = [
         component: HeroSearchPageComponent,
       },
       {
-        path: 'edit/:id',
+        path: 'edit-hero/:id',
         component: HeroAddPageComponent,
       },
       {
