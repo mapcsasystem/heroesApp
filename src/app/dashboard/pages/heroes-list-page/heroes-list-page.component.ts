@@ -14,7 +14,6 @@ export class HeroesListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this._heroesSercice.getHeroes().subscribe((heroes) => {
-      console.log(heroes);
       this.heroes = heroes;
     });
   }

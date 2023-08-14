@@ -28,23 +28,22 @@ const routes: Routes = [
         path: 'heroes-list',
         component: HeroesListPageComponent,
       },
-      {
-        path: ':id',
-        component: HeroPageComponent,
-      },
+      // {
+      //   path: ':id',
+      //   component: HeroPageComponent,
+      // },
       {
         path: '404',
         component: NotFoundPageComponent,
       },
       {
-        path: '',
-        redirectTo: 'heroes-list',
-        pathMatch: 'full',
-      },
-      {
         path: '**',
-        redirectTo: '404',
+        redirectTo: 'heroes-list',
       },
+      // {
+      //   path: '**',
+      //   redirectTo: '404',
+      // },
     ],
   },
 ];
