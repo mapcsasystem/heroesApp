@@ -16,8 +16,10 @@ export class HeroesService {
     return this._http.get<IHero[]>(`${url}`).pipe(catchError(() => of([])));
   }
 
-  getHero(id: string): Observable<IHero | null> {
+  getHeroById(id: string): Observable<IHero | undefined> {
     const url = `${this._apiUrl}/heroes/${id}`;
-    return this._http.get<IHero>(`${url}`).pipe(catchError(() => of(null)));
+    return this._http
+      .get<IHero>(`${url}`)
+      .pipe(catchError((error) => of(undefined)));
   }
 }

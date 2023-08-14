@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LazyImageComponent implements OnInit {
   @Input({ required: true }) urlImage!: string;
-  @Input({ required: true }) alt: string = '';
+  @Input({ required: true }) alt?: string = '';
   hasLoaded: boolean = false;
 
   ngOnInit(): void {
