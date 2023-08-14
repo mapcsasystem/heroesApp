@@ -27,7 +27,6 @@ export class LoginPageComponent {
       this.form.markAllAsTouched();
       return;
     }
-    console.log(this.form.value);
   }
 
   goTo(): void {

@@ -13,6 +13,7 @@ import LocaleEs from '@angular/common/locales/es-MX';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(LocaleEs, 'es-MX');
 
@@ -30,6 +31,7 @@ registerLocaleData(LocaleEs, 'es-MX');
     CommonModule,
     DashboardRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     MaterialModule,
     SharedModule,
   ],

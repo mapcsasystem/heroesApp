@@ -22,4 +22,9 @@ export class HeroesService {
       .get<IHero>(`${url}`)
       .pipe(catchError((error) => of(undefined)));
   }
+
+  getSuggestions(query: string): Observable<IHero[]> {
+    const url = `${this._apiUrl}/heroes?q=${query}&_limit=6`;
+    return this._http.get<IHero[]>(`${url}`).pipe(catchError(() => of([])));
+  }
 }

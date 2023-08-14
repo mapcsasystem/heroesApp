@@ -1,9 +1,13 @@
-<mat-toolbar>
-    Listado de Héroes
-</mat-toolbar>
+<div class="p-2">
 
-<div class="grid m-1">
-    <div class="col-12 sm:col-4 md:col-3 xl:col-3" *ngFor="let hero of heroes">
-        <hero-card [hero]="hero"></hero-card>
+    <h1>
+        Listado de Héroes
+    </h1>
+    <hr>
+
+    <div class="grid m-1">
+        <div class="col-12 sm:col-4 md:col-3 xl:col-3" *ngFor="let hero of heroes">
+            <hero-card [hero]="hero"></hero-card>
+        </div>
     </div>
 </div>
