@@ -39,6 +39,8 @@ export class HeroSearchPageComponent {
     }
     const hero: IHero = event.option.value as IHero;
     this.searchInput.setValue(hero.superhero);
-    this.selectedHero = hero;
+    this._heroesService.getHeroById(hero.id).subscribe((hero) => {
+      this.selectedHero = hero;
+    });
   }
 }
